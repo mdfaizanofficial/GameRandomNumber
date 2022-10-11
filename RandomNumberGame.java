@@ -1,4 +1,4 @@
-// package Programming.Projects;
+package SmartProgramming.Projects;
 
 import java.util.Scanner;
 
@@ -9,33 +9,29 @@ public class Game_Random_Number {
         int num;
         String stop;
         do {
-            // For check which tym you try and achieve.
-            int length = 0;
-            // for Random number
             int ran = (int) (Math.random() * 100);
-            System.out.println("<======================================>");
-            System.out.println("Check: Your number == Random number");
-            System.out.println("<======================================>");
+            System.out.println("======================================");
+            System.out.println("Cheak: Your number == Random number");
+            System.out.println("======================================");
+            int tryTime = 0;
             do {
-                length++;
-                // Enter your number to check your number equal to random or not.
-                System.out.print("Enter number to check : ");
+                System.out.print("Enter number to cheak : ");
                 num = input.nextInt();
+                tryTime++;
                 if (ran > num) {
                     System.out.println("         Error!!!\n Your number is small than Random number.");
                 } else if (ran < num) {
                     System.out.println("           Error!!!\n Your number is greater than Random number");
                 }
                 if (num == ran) {
-                    System.out.println(" @ WOW- - -Correct @");
-                    System.out.println(length + " Time you try and you done it.");
+                    System.out.println("WOW- - -Correct");
+                    System.out.println(tryTime);
                 } else {
                     System.out.println("            Try again");
                 }
             } while (num != ran);
-            // For restart GAME..
             System.out.println("Press (Any key) for continue & Press (Y) for leave.");
             stop = input.next();
-        } while (!stop.equals("Y") && !stop.equals("y") );
+        } while (!stop.equals("Y") && !stop.equals("y"));
     }
 }
