@@ -1,4 +1,4 @@
-package SmartProgramming.Projects;
+package Programming.Projects;
 
 import java.util.Scanner;
 
