@@ -1,22 +1,22 @@
-package Programming.Projects;
-
 import java.util.Scanner;
 
-public class Game_Random_Number {
+public class Game {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("::WELCOME::");
-        int num;
+        System.out.println();
+        System.out.println("            ::WELCOME::");
+        System.out.println("       :Created by MD Faizan:");
+        double num;
         String stop;
         do {
-            int ran = (int) (Math.random() * 100);
+            int ran = (int) (Math.random() * 100);   //This is for randon number....
             System.out.println("======================================");
             System.out.println("Cheak: Your number == Random number");
             System.out.println("======================================");
             int tryTime = 0;
             do {
                 System.out.print("Enter number to cheak : ");
-                num = input.nextInt();
+                num = input.nextDouble();
                 tryTime++;
                 if (ran > num) {
                     System.out.println("         Error!!!\n Your number is small than Random number.");
